@@ -21,6 +21,7 @@ from server import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('cart/', include('server.apps.cart.urls', namespace='cart')),
     path('', include('server.apps.shop.urls', namespace='shop')),
 ]
 
