@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     # Your apps go here:
     'server.apps.shop',
     'server.apps.cart',
+    'server.apps.orders',
 
     # Default django apps:
     'django.contrib.auth',
