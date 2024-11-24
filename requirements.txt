@@ -8,3 +8,4 @@ structlog
 django-migration-linter
 
 Pillow==10.2.0
+celery==5.2.3
