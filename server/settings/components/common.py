@@ -10,8 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
-from django.urls import reverse_lazy
-
 from server.settings.components import config, BASE_DIR
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,6 +24,7 @@ INSTALLED_APPS = [
     'server.apps.shop',
     'server.apps.cart',
     'server.apps.orders',
+    'server.apps.payment',
 
     # Default django apps:
     'django.contrib.auth',
@@ -111,14 +110,13 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR.joinpath('static')
 STATICFILES_DIRS = [
-   BASE_DIR.joinpath('server', 'static')
+    BASE_DIR.joinpath('server', 'static')
 ]
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
-
 
 # Media files
 # Media root dir is commonly changed in production
@@ -132,7 +130,6 @@ MEDIA_ROOT = BASE_DIR.joinpath('media')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 
 # Sessions
 CART_SESSION_ID = 'cart'
