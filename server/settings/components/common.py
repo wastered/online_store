@@ -135,3 +135,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CART_SESSION_ID = 'cart'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+YOOKASSA_SECRET_KEY = config('YOOKASSA_SECRET_KEY')  # Секретный ключ
+YOOKASSA_ACCOUNT_ID = config('YOOKASSA_ACCOUNT_ID')  # ID аккаунта
