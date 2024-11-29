@@ -91,6 +91,8 @@ class Cart:
     def clear(self):
         # удалить корзину из сеанса
         del self.session[settings.CART_SESSION_ID]
+        del self.session['coupon_id']
+
         self.save()
 
     @property

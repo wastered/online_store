@@ -43,10 +43,9 @@ def yk_webhook(request):
     test = data['test']
 
     if payment_status == 'succeeded' and test is False:
-        print(11111111111)
         order_id = data['metadata'].get('order_id')
         order = Order.objects.filter(id=order_id).first()
-        print(f"{order=}")
+
         if order:
             order.paid = True
             order.yookassa_id = data['id']

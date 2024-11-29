@@ -17,7 +17,7 @@ def payment_process(request):
 
     if request.method == "POST":
         return_url = request.build_absolute_uri(reverse('payment:completed'))
-        total_price = sum(item.price * item.quantity for item in order.items.all())
+        total_price = order.get_total_cost()
 
         #  данные для оформления платежа
         payment_data = {
