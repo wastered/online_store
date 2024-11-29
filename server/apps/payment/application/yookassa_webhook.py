@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 
 from ...orders.models import Order
+from ..tasks import payment_completed
 
 IPS = [
     ipaddress.IPv4Network('185.71.76.0/27'),
@@ -50,5 +51,8 @@ def yk_webhook(request):
             order.paid = True
             order.yookassa_id = data['id']
             order.save()
+
+            # запустить асинхронное задание
+            payment_completed.delay(order.id)
             return HttpResponse(status=200)
     return HttpResponse(status=400)
