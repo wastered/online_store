@@ -1,11 +1,15 @@
-from django.urls import reverse
-from django.shortcuts import render, redirect, get_object_or_404
+import weasyprint
 from django.contrib.admin.views.decorators import staff_member_required
+from django.http import HttpResponse
+from django.shortcuts import render, redirect, get_object_or_404
+from django.template.loader import render_to_string
+from django.urls import reverse
 
 from .forms import OrderCreateForm
 from .models import OrderItem, Order
 from .tasks import order_created
 from ..cart.cart import Cart
+from ...settings.components.common import STATIC_ROOT
 
 
 def order_create(request):
@@ -49,3 +53,15 @@ def admin_order_detail(request, order_id):
                   context={
                       'order': order,
                   })
+
+
+@staff_member_required
+def admin_order_pdf(request, order_id):
+    order = get_object_or_404(Order, id=order_id)
+    html = render_to_string('orders/order/pdf.html',
+                            {'order': order})
+    response = HttpResponse(html, content_type='application/pdf')
+    response['Content-Disposition'] = f"filename=order_{order_id}.pdf"
+    weasyprint.HTML(string=html).write_pdf(response, stylesheets=[weasyprint.CSS(STATIC_ROOT / 'orders/css/pdf.css')])
+
+    return response

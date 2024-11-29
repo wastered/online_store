@@ -11,3 +11,4 @@ Pillow==10.2.0
 celery==5.2.3
 
 yookassa~=2.4
+WeasyPrint==56.1
