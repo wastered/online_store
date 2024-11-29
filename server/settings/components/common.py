@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'server.apps.cart',
     'server.apps.orders',
     'server.apps.payment',
+    'server.apps.coupons',
 
     # Default django apps:
     'django.contrib.auth',
