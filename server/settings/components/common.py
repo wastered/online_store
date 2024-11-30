@@ -139,3 +139,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 YOOKASSA_SECRET_KEY = config('YOOKASSA_SECRET_KEY')  # Секретный ключ
 YOOKASSA_ACCOUNT_ID = config('YOOKASSA_ACCOUNT_ID')  # ID аккаунта
+
+# настроечные параметры Redis
+REDIS_HOST = config('REDIS_HOST')
+REDIS_PORT = config('REDIS_PORT')
+REDIS_DB = config('REDIS_DB')
