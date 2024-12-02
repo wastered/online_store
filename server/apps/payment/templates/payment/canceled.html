@@ -1,8 +1,9 @@
 {% extends "base.html" %}
+{% load i18n %}
 
-{% block title %}Payment canceled{% endblock %}
+{% block title %}{% trans "Payment canceled"%}{% endblock %}
 
 {% block content %}
-    <h1>Failed to create payment</h1>
-    <p>There were problems while creating it.</p>
+    <h1>{% trans "Failed to create payment"%}</h1>
+    <p>{% trans "There were problems while creating it"%}.</p>
 {% endblock %}

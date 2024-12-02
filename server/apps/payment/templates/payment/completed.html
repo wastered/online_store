@@ -1,8 +1,9 @@
 {% extends "base.html" %}
+{% load i18n %}
 
-{% block title %}Payment successful{% endblock %}
+{% block title %}{% trans "Payment successful"%}{% endblock %}
 
 {% block content %}
-    <h1>Your payment will be processed soon</h1>
-    <p>Order details will be sent to your email.</p>
+    <h1>{% trans "Your payment will be processed soon"%}</h1>
+    <p>{% trans "Order details will be sent to your email"%}.</p>
 {% endblock %}

@@ -1,0 +1,167 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-02 17:12+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: server/apps/orders/models.py:12
+msgid "first name"
+msgstr ""
+
+#: server/apps/orders/models.py:13
+msgid "last_name"
+msgstr ""
+
+#: server/apps/orders/models.py:14
+msgid "email"
+msgstr ""
+
+#: server/apps/orders/models.py:15
+msgid "address"
+msgstr ""
+
+#: server/apps/orders/models.py:16
+msgid "postal code"
+msgstr ""
+
+#: server/apps/orders/models.py:17
+msgid "city"
+msgstr ""
+
+#: server/apps/orders/templates/admin/orders/order/detail.html:20
+msgid "Order"
+msgstr ""
+
+#: server/apps/orders/templates/admin/orders/order/detail.html:24
+msgid "Print order"
+msgstr ""
+
+#: server/apps/orders/templates/admin/orders/order/detail.html:30
+msgid "Created"
+msgstr ""
+
+#: server/apps/orders/templates/admin/orders/order/detail.html:34
+msgid "Customer"
+msgstr ""
+
+#: server/apps/orders/templates/admin/orders/order/detail.html:38
+msgid "E-mail"
+msgstr ""
+
+#: server/apps/orders/templates/admin/orders/order/detail.html:42
+msgid "Address"
+msgstr ""
+
+#: server/apps/orders/templates/admin/orders/order/detail.html:49
+msgid "Total amount"
+msgstr ""
+
+#: server/apps/orders/templates/admin/orders/order/detail.html:53
+msgid "Status"
+msgstr ""
+
+#: server/apps/orders/templates/admin/orders/order/detail.html:54
+#: server/apps/orders/templates/orders/order/pdf.html:56
+msgid "Paid"
+msgstr ""
+
+#: server/apps/orders/templates/admin/orders/order/detail.html:54
+#: server/apps/orders/templates/orders/order/pdf.html:56
+msgid "Pending payment"
+msgstr ""
+
+#: server/apps/orders/templates/admin/orders/order/detail.html:59
+#: server/apps/orders/templates/orders/order/pdf.html:18
+msgid "Items bought"
+msgstr ""
+
+#: server/apps/orders/templates/admin/orders/order/detail.html:63
+#: server/apps/orders/templates/orders/order/pdf.html:22
+msgid "Product"
+msgstr ""
+
+#: server/apps/orders/templates/admin/orders/order/detail.html:64
+#: server/apps/orders/templates/orders/order/pdf.html:23
+msgid "Price"
+msgstr ""
+
+#: server/apps/orders/templates/admin/orders/order/detail.html:65
+#: server/apps/orders/templates/orders/order/pdf.html:24
+msgid "Quantity"
+msgstr ""
+
+#: server/apps/orders/templates/admin/orders/order/detail.html:66
+#: server/apps/orders/templates/admin/orders/order/detail.html:96
+#: server/apps/orders/templates/orders/order/create.html:28
+#: server/apps/orders/templates/orders/order/pdf.html:49
+msgid "Total"
+msgstr ""
+
+#: server/apps/orders/templates/admin/orders/order/detail.html:80
+msgid "Subtotal"
+msgstr ""
+
+#: server/apps/orders/templates/admin/orders/order/detail.html:87
+#: server/apps/orders/templates/orders/order/pdf.html:40
+msgid "coupon"
+msgstr ""
+
+#: server/apps/orders/templates/orders/order/create.html:5
+#: server/apps/orders/templates/orders/order/create.html:9
+msgid "Buyer details"
+msgstr ""
+
+#: server/apps/orders/templates/orders/order/create.html:11
+msgid "Your order"
+msgstr ""
+
+#: server/apps/orders/templates/orders/order/create.html:21
+#, python-format
+msgid ""
+"\n"
+"                        \"%(code)s\" (%(discount)s%% off)\n"
+"                    "
+msgstr ""
+
+#: server/apps/orders/templates/orders/order/create.html:32
+msgid "Place order"
+msgstr ""
+
+#: server/apps/orders/templates/orders/order/created.html:5
+#: server/apps/orders/templates/orders/order/created.html:9
+msgid "Thank you"
+msgstr ""
+
+#: server/apps/orders/templates/orders/order/created.html:10
+msgid "Your order has been successfully completed. Your order number is"
+msgstr ""
+
+#: server/apps/orders/templates/orders/order/pdf.html:4
+msgid "My Shop"
+msgstr ""
+
+#: server/apps/orders/templates/orders/order/pdf.html:6
+msgid "Invoice no."
+msgstr ""
+
+#: server/apps/orders/templates/orders/order/pdf.html:11
+msgid "Bill to"
+msgstr ""
+
+#: server/apps/orders/templates/orders/order/pdf.html:25
+msgid "Cost"
+msgstr ""
