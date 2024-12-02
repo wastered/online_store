@@ -25,8 +25,10 @@ urlpatterns = [
     path('orders/', include('server.apps.orders.urls', namespace='orders')),
     path('payment/', include('server.apps.payment.urls', namespace='payment')),
     path('coupons/', include('server.apps.coupons.urls', namespace='coupons')),
+    path('i18n/', include('django.conf.urls.i18n')),
     path('', include('server.apps.shop.urls', namespace='shop')),
 ]
+
 
 if settings.DEBUG:  # pragma: no cover
     # import debug_toolbar  # noqa: WPS433

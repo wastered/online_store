@@ -156,3 +156,4 @@ LOCALE_PATHS = [
     BASE_DIR / 'locale',
     BASE_DIR.joinpath('server/apps/orders/locale'),
 ]
+LANGUAGE_COOKIE_NAME = 'django_language'

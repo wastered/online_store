@@ -10,6 +10,24 @@
 <body>
 <div id="header">
     <a href="/" class="logo">{% trans "My shop" %}</a>
+    {% get_current_language as LANGUAGE_CODE %}
+    {% get_available_languages as LANGUAGES %}
+    {% get_language_info_list for LANGUAGES as languages %}
+<div class="languages">
+    <ul>
+        {% for language in languages %}
+            <li>
+                <form action="{% url 'set_language' %}" method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <input type="hidden" name="language" value="{{ language.code }}">
+                    <button type="submit" {% if language.code == LANGUAGE_CODE %}class="selected"{% endif %}>
+                        {{ language.name_translated }}
+                    </button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
 </div>
 <div id="subheader">
     <div class="cart">
