@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'server.apps.orders',
     'server.apps.payment',
     'server.apps.coupons',
+    'parler',
 
     # Default django apps:
     'django.contrib.auth',
@@ -157,3 +158,15 @@ LOCALE_PATHS = [
     BASE_DIR.joinpath('server/apps/orders/locale'),
 ]
 LANGUAGE_COOKIE_NAME = 'django_language'
+
+# настройки django-parler
+PARLER_LANGUAGES = {
+    None: (
+        {'code': 'en'},
+        {'code': 'ru'},
+    ),
+    'default': {
+        'fallback': 'en',
+        'hide_untranslated': False,
+    }
+}
