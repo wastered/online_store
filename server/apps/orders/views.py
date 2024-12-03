@@ -40,6 +40,8 @@ def order_create(request):
                 # перенаправить к платежу
                 return redirect(reverse('payment:process'))
     else:
+        if not cart:
+            return redirect(reverse('shop:product_list'))
         form = OrderCreateForm()
 
     return render(request,
